@@ -1,0 +1,10 @@
+{
+  "set_separator": ",",
+  "empty_field": "(empty)",
+  "unset_field": "-",
+  "path": "conn",
+  "open": "2024-12-16-10-00-05",
+  "fields": "ts\tuid\tid.orig_h\tid.orig_p\tid.resp_h\tid.resp_p\tproto\tservice\tduration\torig_bytes\tresp_bytes\tconn_state\tlocal_orig\tlocal_resp\tmissed_bytes\thistory\torig_pkts\torig_ip_bytes\tresp_pkts\tresp_ip_bytes\ttunnel_parents",
+  "types": "time\tstring\taddr\tport\taddr\tport\tenum\tstring\tinterval\tcount\tcount\tstring\tbool\tbool\tcount\tstring\tcount\tcount\tcount\tcount\tset[string]",
+  "close": "2024-12-16-11-00-00"
+}

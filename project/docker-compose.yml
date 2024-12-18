@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  zeek:
+    build: ./zeek
+    container_name: zeek
+    working_dir: /usr/local/zeek
+    command: >
+      bash -c "
+      zeekctl deploy &&
+      while [ ! -f /usr/local/zeek/logs/current/zeek.log ]; do sleep 1; done &&
+      tail -f /usr/local/zeek/logs/current/zeek.log"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    volumes:
+      - ./zeek/logs:/usr/local/zeek/logs
+      - ./zeek/etc:/usr/local/zeek/etc
+    network_mode: "host"
